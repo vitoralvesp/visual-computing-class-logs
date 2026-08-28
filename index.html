@@ -92,26 +92,72 @@
 
   <div class="note">
     <h3>Aula 01 - O que é Computação Visual?</h3>
-    <div class="note-meta">27 ago 2026</div>
+    <div class="note-meta">13 ago 2026</div>
     <p>
-      Para além do que normalmente se imagina ao ouvir o termo “Computação Visual” pela primeira vez, a área vai muito além de tecnologias e soluções voltadas apenas para a captura e o processamento de imagens; 
-      é uma área de grande impacto no que conhecemos hoje como mundo digital, envolvendo, entre outras coisas, a captação de imagens do mundo real em 3D e sua representação no ambiente digital em 2D. <br>
-      Os avanços ao longo dos anos possibilitaram avanços significativos na medicina - detecção de doênças e tratamentos -, fotografia - captação e tratamento de imagens -, aprendizado de máquina, inteligência 
-      artificial e muito mais. <br>
-      Portanto, de modo geral, computação visual trata-se de imagens. E muito mais.
+      Para além do que normalmente se imagina ao ouvir o termo **“Computação Visual”** pela primeira vez, essa área vai muito além de tecnologias e soluções voltadas apenas para a captura e o processamento de imagens. Ela tem um grande impacto no que conhecemos hoje como mundo digital, envolvendo, entre outras coisas, a captura de elementos do mundo real em 3D e sua representação no ambiente digital em 2D.<br>
+      Com o passar dos anos, seus avanços trouxeram melhorias importantes para várias áreas, como a medicina — na detecção de doenças e em seus tratamentos —, a fotografia — na captura e no tratamento de imagens —, o aprendizado de máquina, a inteligência artificial e muito mais.<br>
+      Portanto, de modo geral, a Computação Visual trata de imagens. **E de muito mais.**
     </p>
   </div>
 
   <hr />
 
   <div class="note">
-    <h3>Introdução à Filosofia</h3>
-    <div class="note-meta">25 ago 2026</div>
-    <p>Platão distingue entre o mundo sensível (das aparências) e o mundo inteligível (das ideias). O mito da caverna ilustra a diferença entre opinião (doxa) e conhecimento verdadeiro (episteme).</p>
+    <h3>Aula 02 - Representação Visual no Meio Digital e Fundamentos da Imagem</h3>
+    <div class="note-meta">20 ago 2026</div>
+    <p>
+      Aula de apresentação dos conceitos envolvendo pixel, armazenamento de imagens, imagem matricial vs vetorial, modelos de cor (RGB vs CMYK), fidelidade na representação digital e diferenciação de imagens em escala de cinza vs preto e branco.<br>
+      Confira a seguir algumas definições desses conceitos e anotações das aulas:
+      1. Formas de Representação Visual do Computador
+      <ul>
+        <li>Vídeo: sequência de imagens (frames/quadros) exibidas em alta velocidade, enganando o cérebro para interpretar movimento — daí "motion picture" / "movie"</li>
+        <li>Câmera lenta: muitas imagens semelhantes por segundo; o cérebro percebe como movimento muito devagar</li>
+        <li>Imagens médicas (raio-x, tomografia, ressonância): geradas por máquinas que capturam frequências eletromagnéticas invisíveis ao olho humano</li>
+        <li>Escaneamento/nuvem de pontos 3D: sensor mede distâncias, gerando milhões de pontos que reconstroem o espaço ou objeto digitalmente</li>
+      </ul>
+
+      2. Pixel e Armazenamento de Imagens
+      <ul>
+        <li>Pixel: menor unidade visual em tela; resolução = largura × altura em pixels (ex: 1920×1080 = ~2 milhões de pixels) </li>
+        <li>Cada pixel é composto por três valores de cor: vermelho, verde e azul (RGB) </li>
+        <li>Uma imagem digital é armazenada como uma matriz de pixels, onde cada posição contém valores RGB — chamada de imagem matricial (raster) </li>
+        <li>Modelos 3D armazenam coordenadas espaciais (vértices, polígonos); diferente de imagens 2D estáticas</li>
+      </ul>
+
+      3. Imagem Matricial vs Imagem Vetorial
+      <ul>
+        <li>Matricial (raster): grade fixa de pixels; ao dar zoom excessivo, surgem borrões — ex: JPEG, PNG, Photoshop </li>
+        <li>Vetorial: baseada em equações matemáticas; sem resolução fixa, escala sem perda de qualidade — ex: SVG, Illustrator, Inkscape, fontes tipográficas </li>
+        <li>Tudo que aparece na tela é, no final, matricial — softwares vetoriais convertem em tempo real para pixels na exibição</li>
+        <li>PDF: texto é vetorial (zoom sem distorção); imagens embutidas em JPEG são matriciais (zoom degrada) </li>
+      </ul>
+
+      4. Modelos de Cor: RGB vs CMYK
+      <ul>
+        <li>RGB (aditivo — luz): vermelho, verde e azul; ausência de luz = preto; todas as cores juntas = branco — usado em telas/monitores </li>
+        <li>CMYK (subtrativo — pigmento/tinta): ciano, magenta, amarelo e preto (K); tinta absorve luz e reflete o restante; mistura de todas → preto teórico (na prática, sujeira) </li>
+        <li>O amarelo, no modelo RGB do computador, é obtido pela combinação de vermelho + verde </li>
+        <li>Impressoras trabalham com CMYK; imagens criadas em RGB podem sair distorcidas se não convertidas</li>
+      </ul>
+
+      5. Fidelidade da Representação Digital
+      <ul>
+        <li>A representação digital não é completamente fiel à realidade — no computador tudo é discreto (finito), enquanto a realidade é contínua/infinita</li>
+        <li>Quanto mais pixels (maior resolução), mais detalhes são capturados — mas sempre há uma limitação</li>
+        <li>Exemplo: dar zoom numa foto revela borrões onde haveria detalhes contínuos </li>
+      </ul>
+
+      6. Escala de Cinza vs Binária
+      <ul>
+        <li>Imagem preto e branco (binária): pixels são estritamente 0,0,0 (preto) ou 255,255,255 (branco) </li>
+        <li>Escala de cinza: pixels variam entre preto e branco, com tons intermediários (ex: RGB 128,128,128 = cinza médio)</li>
+        <li>Os dois termos são frequentemente confundidos no uso cotidiano, mas têm definições técnicas distintas</li>
+      </ul>
+    </p>
   </div>
 
   <footer>
-    <p>© 2026</p>
+    <p>by vitoralvesp</p>
   </footer>
 
 </body>
