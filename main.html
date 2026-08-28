@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anotações de Aula</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      overflow-y: scroll;
+      height: 100%;
+      font: 100%/1.5 Georgia, 'Times New Roman', serif;
+      word-wrap: break-word;
+      margin: 0 auto;
+      padding: 1.5em;
+      color: #222;
+    }
+
+    @media (min-width: 768px) {
+      html {
+        font-size: 118%;
+        max-width: 42em;
+      }
+    }
+
+    h1, h2, h3 {
+      margin: 2.5rem 0 1.5rem 0;
+      line-height: 1.25;
+      color: #333;
+    }
+
+    a {
+      color: #0000EE;
+    }
+
+    a:visited {
+      color: #551A8B;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3em;
+    }
+
+    .note {
+      margin: 2em 0;
+    }
+
+    .note h3 {
+      margin: 0 0 0.25em;
+      font-size: 1.1em;
+    }
+
+    .note-meta {
+      font-size: 0.78em;
+      font-family: monospace, monospace;
+      color: #888;
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      margin-top: 4em;
+      padding-top: 1em;
+      border-top: 1px solid #ddd;
+      font-size: 0.85em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <strong>Anotações de Aula</strong>
+  </header>
+
+  <!-- Para adicionar uma nova anotação, copie o bloco abaixo e preencha -->
+
+  <div class="note">
+    <h3>Cálculo I — Derivadas</h3>
+    <div class="note-meta">27 ago 2026</div>
+    <p>A derivada de uma função f(x) representa a taxa de variação instantânea. Regra da cadeia: se h(x) = f(g(x)), então h'(x) = f'(g(x)) · g'(x).</p>
+    <p>Exemplo: d/dx[sin(x²)] = cos(x²) · 2x.</p>
+  </div>
+
+  <hr />
+
+  <div class="note">
+    <h3>Introdução à Filosofia</h3>
+    <div class="note-meta">25 ago 2026</div>
+    <p>Platão distingue entre o mundo sensível (das aparências) e o mundo inteligível (das ideias). O mito da caverna ilustra a diferença entre opinião (doxa) e conhecimento verdadeiro (episteme).</p>
+  </div>
+
+  <footer>
+    <p>© 2026</p>
+  </footer>
+
+</body>
+</html>
