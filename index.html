@@ -3,194 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anotações de Aula | Computação Visual</title>
+  <title>Anotações de Aula</title>
   <style>
-    /* Reset básico */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      background-color: #f4f5f7; /* Fundo cinza bem claro */
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: #334155;
-      line-height: 1.6;
-      padding: 20px;
-    }
-
-    /* Container principal */
-    main {
-      max-width: 800px;
+    html {
+      overflow-y: scroll;
+      height: 100%;
+      font: 100%/1.5 Georgia, 'Times New Roman', serif;
+      word-wrap: break-word;
       margin: 0 auto;
+      padding: 1.5em;
+      color: #222;
     }
 
-    /* Cabeçalho do Blog */
+    @media (min-width: 768px) {
+      html {
+        font-size: 118%;
+        max-width: 42em;
+      }
+    }
+
+    h1, h2, h3 {
+      margin: 2.5rem 0 1.5rem 0;
+      line-height: 1.25;
+      color: #333;
+    }
+
+    a {
+      color: #0000EE;
+    }
+
+    a:visited {
+      color: #551A8B;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2em 0;
+    }
+
     header {
-      text-align: center;
-      margin-bottom: 3rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3em;
     }
 
-    header h1 {
-      color: #0f172a;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      color: #64748b;
-      font-size: 1rem;
-    }
-
-    /* Estilo dos "Cards" de anotação */
     .note {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-      transition: transform 0.2s ease;
+      margin: 2em 0;
     }
 
-    .note:hover {
-      transform: translateY(-2px);
+    .note h3 {
+      margin: 0 0 0.25em;
+      font-size: 1.1em;
     }
 
-    .note h2 {
-      color: #1e293b;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Etiqueta de data */
     .note-meta {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #0284c7;
-      background-color: #e0f2fe;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 1.5rem;
+      font-size: 0.78em;
+      font-family: monospace, monospace;
+      color: #888;
+      margin-bottom: 0.5em;
     }
 
-    /* Textos e listas dentro das notas */
-    .note p {
-      margin-bottom: 1.2rem;
-    }
-
-    .note strong {
-      color: #0f172a;
-    }
-
-    /* Subtópicos da Aula 02 */
-    .topic-title {
-      font-size: 1.1rem;
-      color: #334155;
-      margin: 1.5rem 0 0.5rem 0;
-      border-left: 4px solid #0284c7;
-      padding-left: 10px;
-    }
-
-    .note ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .note li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Rodapé */
     footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      color: #94a3b8;
-      font-size: 0.9rem;
+      margin-top: 4em;
+      padding-top: 1em;
+      border-top: 1px solid #ddd;
+      font-size: 0.85em;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <main>
-    <header>
-      <h1>Anotações de Aula</h1>
-      <p>Meu diário de estudos sobre Computação Visual</p>
-    </header>
+  <header>
+    <strong>Anotações de Aula</strong>
+  </header>
 
-    <article class="note">
-      <h2>Aula 01 - O que é Computação Visual?</h2>
-      <div class="note-meta">13 ago 2026</div>
-      
-      <p>Para além do que normalmente se imagina ao ouvir o termo <strong>“Computação Visual”</strong> pela primeira vez, essa área vai muito além de tecnologias e soluções voltadas apenas para a captura e o processamento de imagens. Ela tem um grande impacto no que conhecemos hoje como mundo digital, envolvendo, entre outras coisas, a captura de elementos do mundo real em 3D e sua representação no ambiente digital em 2D.</p>
-      
-      <p>Com o passar dos anos, seus avanços trouxeram melhorias importantes para várias áreas, como a medicina — na detecção de doenças e em seus tratamentos —, a fotografia — na captura e no tratamento de imagens —, o aprendizado de máquina, a inteligência artificial e muito mais.</p>
-      
-      <p>Portanto, de modo geral, a Computação Visual trata de imagens. <strong>E de muito mais.</strong></p>
-    </article>
+  <div class="note">
+    <h3>Aula 01 - O que é Computação Visual?</h3>
+    <div class="note-meta">13 ago 2026</div>
+    <p>
+      Para além do que normalmente se imagina ao ouvir o termo **“Computação Visual”** pela primeira vez, essa área vai muito além de tecnologias e soluções voltadas apenas para a captura e o processamento de imagens. Ela tem um grande impacto no que conhecemos hoje como mundo digital, envolvendo, entre outras coisas, a captura de elementos do mundo real em 3D e sua representação no ambiente digital em 2D.<br>
+      Com o passar dos anos, seus avanços trouxeram melhorias importantes para várias áreas, como a medicina — na detecção de doenças e em seus tratamentos —, a fotografia — na captura e no tratamento de imagens —, o aprendizado de máquina, a inteligência artificial e muito mais.<br>
+      Portanto, de modo geral, a Computação Visual trata de imagens. **E de muito mais.**
+    </p>
+  </div>
 
-    <article class="note">
-      <h2>Aula 02 - Representação Visual no Meio Digital e Fundamentos da Imagem</h2>
-      <div class="note-meta">20 ago 2026</div>
-      
-      <p>Aula de apresentação dos conceitos envolvendo pixel, armazenamento de imagens, imagem matricial vs vetorial, modelos de cor (RGB vs CMYK), fidelidade na representação digital e diferenciação de imagens em escala de cinza vs preto e branco.</p>
-      
-      <p>Confira a seguir algumas definições desses conceitos e anotações das aulas:</p>
+  <hr />
 
-      <h4 class="topic-title">1. Formas de Representação Visual do Computador</h4>
+  <div class="note">
+    <h3>Aula 02 - Representação Visual no Meio Digital e Fundamentos da Imagem</h3>
+    <div class="note-meta">20 ago 2026</div>
+    <p>
+      Aula de apresentação dos conceitos envolvendo pixel, armazenamento de imagens, imagem matricial vs vetorial, modelos de cor (RGB vs CMYK), fidelidade na representação digital e diferenciação de imagens em escala de cinza vs preto e branco.<br>
+      Confira a seguir algumas definições desses conceitos e anotações das aulas: <br>
+      1. Formas de Representação Visual do Computador
       <ul>
-        <li><strong>Vídeo:</strong> sequência de imagens (frames/quadros) exibidas em alta velocidade, enganando o cérebro para interpretar movimento — daí "motion picture" / "movie".</li>
-        <li><strong>Câmera lenta:</strong> muitas imagens semelhantes por segundo; o cérebro percebe como movimento muito devagar.</li>
-        <li><strong>Imagens médicas (raio-x, tomografia, ressonância):</strong> geradas por máquinas que capturam frequências eletromagnéticas invisíveis ao olho humano.</li>
-        <li><strong>Escaneamento/nuvem de pontos 3D:</strong> sensor mede distâncias, gerando milhões de pontos que reconstroem o espaço ou objeto digitalmente.</li>
+        <li>Vídeo: sequência de imagens (frames/quadros) exibidas em alta velocidade, enganando o cérebro para interpretar movimento — daí "motion picture" / "movie"</li>
+        <li>Câmera lenta: muitas imagens semelhantes por segundo; o cérebro percebe como movimento muito devagar</li>
+        <li>Imagens médicas (raio-x, tomografia, ressonância): geradas por máquinas que capturam frequências eletromagnéticas invisíveis ao olho humano</li>
+        <li>Escaneamento/nuvem de pontos 3D: sensor mede distâncias, gerando milhões de pontos que reconstroem o espaço ou objeto digitalmente</li>
+      </ul>
+    
+      <br>
+    
+      2. Pixel e Armazenamento de Imagens
+      <ul>
+        <li>Pixel: menor unidade visual em tela; resolução = largura × altura em pixels (ex: 1920×1080 = ~2 milhões de pixels) </li>
+        <li>Cada pixel é composto por três valores de cor: vermelho, verde e azul (RGB) </li>
+        <li>Uma imagem digital é armazenada como uma matriz de pixels, onde cada posição contém valores RGB — chamada de imagem matricial (raster) </li>
+        <li>Modelos 3D armazenam coordenadas espaciais (vértices, polígonos); diferente de imagens 2D estáticas</li>
       </ul>
 
-      <h4 class="topic-title">2. Pixel e Armazenamento de Imagens</h4>
+      <br>
+    
+      3. Imagem Matricial vs Imagem Vetorial
       <ul>
-        <li><strong>Pixel:</strong> menor unidade visual em tela; resolução = largura × altura em pixels (ex: 1920×1080 = ~2 milhões de pixels).</li>
-        <li>Cada pixel é composto por três valores de cor: vermelho, verde e azul (RGB).</li>
-        <li>Uma imagem digital é armazenada como uma matriz de pixels, onde cada posição contém valores RGB — chamada de imagem matricial (raster).</li>
-        <li>Modelos 3D armazenam coordenadas espaciais (vértices, polígonos); diferente de imagens 2D estáticas.</li>
+        <li>Matricial (raster): grade fixa de pixels; ao dar zoom excessivo, surgem borrões — ex: JPEG, PNG, Photoshop </li>
+        <li>Vetorial: baseada em equações matemáticas; sem resolução fixa, escala sem perda de qualidade — ex: SVG, Illustrator, Inkscape, fontes tipográficas </li>
+        <li>Tudo que aparece na tela é, no final, matricial — softwares vetoriais convertem em tempo real para pixels na exibição</li>
+        <li>PDF: texto é vetorial (zoom sem distorção); imagens embutidas em JPEG são matriciais (zoom degrada) </li>
       </ul>
 
-      <h4 class="topic-title">3. Imagem Matricial vs Imagem Vetorial</h4>
+      <br>
+    
+      4. Modelos de Cor: RGB vs CMYK
       <ul>
-        <li><strong>Matricial (raster):</strong> grade fixa de pixels; ao dar zoom excessivo, surgem borrões — ex: JPEG, PNG, Photoshop.</li>
-        <li><strong>Vetorial:</strong> baseada em equações matemáticas; sem resolução fixa, escala sem perda de qualidade — ex: SVG, Illustrator, Inkscape, fontes tipográficas.</li>
-        <li>Tudo que aparece na tela é, no final, matricial — softwares vetoriais convertem em tempo real para pixels na exibição.</li>
-        <li><strong>PDF:</strong> texto é vetorial (zoom sem distorção); imagens embutidas em JPEG são matriciais (zoom degrada).</li>
+        <li>RGB (aditivo — luz): vermelho, verde e azul; ausência de luz = preto; todas as cores juntas = branco — usado em telas/monitores </li>
+        <li>CMYK (subtrativo — pigmento/tinta): ciano, magenta, amarelo e preto (K); tinta absorve luz e reflete o restante; mistura de todas → preto teórico (na prática, sujeira) </li>
+        <li>O amarelo, no modelo RGB do computador, é obtido pela combinação de vermelho + verde </li>
+        <li>Impressoras trabalham com CMYK; imagens criadas em RGB podem sair distorcidas se não convertidas</li>
       </ul>
 
-      <h4 class="topic-title">4. Modelos de Cor: RGB vs CMYK</h4>
+      <br>
+    
+      5. Fidelidade da Representação Digital
       <ul>
-        <li><strong>RGB (aditivo — luz):</strong> vermelho, verde e azul; ausência de luz = preto; todas as cores juntas = branco — usado em telas/monitores.</li>
-        <li><strong>CMYK (subtrativo — pigmento/tinta):</strong> ciano, magenta, amarelo e preto (K); tinta absorve luz e reflete o restante; mistura de todas → preto teórico (na prática, sujeira).</li>
-        <li>O amarelo, no modelo RGB do computador, é obtido pela combinação de vermelho + verde.</li>
-        <li>Impressoras trabalham com CMYK; imagens criadas em RGB podem sair distorcidas se não convertidas.</li>
+        <li>A representação digital não é completamente fiel à realidade — no computador tudo é discreto (finito), enquanto a realidade é contínua/infinita</li>
+        <li>Quanto mais pixels (maior resolução), mais detalhes são capturados — mas sempre há uma limitação</li>
+        <li>Exemplo: dar zoom numa foto revela borrões onde haveria detalhes contínuos </li>
       </ul>
 
-      <h4 class="topic-title">5. Fidelidade da Representação Digital</h4>
-      <ul>
-        <li>A representação digital não é completamente fiel à realidade — no computador tudo é discreto (finito), enquanto a realidade é contínua/infinita.</li>
-        <li>Quanto mais pixels (maior resolução), mais detalhes são capturados — mas sempre há uma limitação.</li>
-        <li>Exemplo: dar zoom numa foto revela borrões onde haveria detalhes contínuos.</li>
-      </ul>
+      <br>
 
-      <h4 class="topic-title">6. Escala de Cinza vs Binária</h4>
+      6. Escala de Cinza vs Binária
       <ul>
-        <li><strong>Imagem preto e branco (binária):</strong> pixels são estritamente 0,0,0 (preto) ou 255,255,255 (branco).</li>
-        <li><strong>Escala de cinza:</strong> pixels variam entre preto e branco, com tons intermediários (ex: RGB 128,128,128 = cinza médio).</li>
-        <li>Os dois termos são frequentemente confundidos no uso cotidiano, mas têm definições técnicas distintas.</li>
+        <li>Imagem preto e branco (binária): pixels são estritamente 0,0,0 (preto) ou 255,255,255 (branco) </li>
+        <li>Escala de cinza: pixels variam entre preto e branco, com tons intermediários (ex: RGB 128,128,128 = cinza médio)</li>
+        <li>Os dois termos são frequentemente confundidos no uso cotidiano, mas têm definições técnicas distintas</li>
       </ul>
-    </article>
-  </main>
+    </p>
+  </div>
 
   <footer>
-    <p>Criado por vitoralvesp</p>
+    <p>by vitoralvesp</p>
   </footer>
 
 </body>
