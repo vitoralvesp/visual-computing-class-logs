@@ -179,6 +179,62 @@
     </p>
   </div>
 
+  Segue a nova seção no mesmo padrão das anteriores. Cole logo após o `</div>` da Aula 02 (com o `<hr />` incluído):
+
+  <hr />
+  
+  <div class="note">
+    <h3>Aula 03 - Aquisição de Imagens: Sensores, Amostragem, Quantização e Transformação de Intensidade</h3>
+    <div class="note-meta">3 sep 2026</div>
+    <p>
+    Confira a seguir as anotações relacionadas aos estudos dos tópicos apresentados em aula sobre as transformações de intensidade:<br><br>
+    
+    <b>1. Sensores de Luz</b>
+    <ul>
+      <li>CCD: tecnologia mais antiga, atualmente pouco utilizada</li>
+      <li>CMOS: padrão atual; converte a intensidade luminosa em valor elétrico em cada célula do sensor</li>
+      <li>O valor elétrico de cada fotorreceptor é posteriormente convertido em valor digital, definindo a intensidade de cada pixel</li>
+    </ul>
+    
+    <b>2. Amostragem</b>
+    <ul>
+      <li>Discretiza o <b>espaço</b>: define <i>onde</i> a imagem será medida</li>
+      <li>Transforma a cena contínua em uma matriz de pixels — ou seja, define a resolução espacial</li>
+      <li>É a etapa <b>anterior</b> à quantização</li>
+    </ul>
+    
+    <b>3. Quantização</b>
+    <ul>
+      <li>Discretiza a <b>intensidade</b>: define <i>quais valores</i> cada pixel pode assumir</li>
+      <li>Converte os valores contínuos de intensidade luminosa em valores discretos</li>
+      <li>Com 1 byte por nível de intensidade, temos 256 níveis possíveis (0 a 255)</li>
+    </ul>
+    
+    <b>4. Pipeline de Formação da Imagem Digital</b>
+    <ul>
+      <li>Luz → sinal elétrico (sensor) → amostragem → quantização → imagem digital</li>
+      <li>Cada etapa introduz uma perda: a amostragem limita o detalhe espacial, a quantização limita a precisão da intensidade</li>
+    </ul>
+    
+    <b>5. Funções de Intensidade</b>
+    <ul>
+      <li>Descrevem a intensidade dos pixels/fotorreceptores, geralmente em escala de cinza</li>
+      <li>Evidenciam graficamente o percurso do sinal elétrico até o valor digital final</li>
+      <li>Mostram o efeito da amostragem e da quantização na conversão de imagem contínua para digital</li>
+    </ul>
+    
+    <b>6. Transformação de Intensidade: Negativo de uma Imagem</b>
+    <ul>
+      <li>Operação ponto a ponto definida por <b>S = (L - 1) - E</b></li>
+      <li><b>S</b>: pixel de saída | <b>E</b>: pixel de entrada | <b>(L - 1)</b>: intensidade máxima da imagem (255 para 1 byte)</li>
+      <li>Inverte os níveis de intensidade: o que era claro fica escuro e vice-versa</li>
+      <li>Aplicar a transformação duas vezes retorna a imagem original</li>
+      <li>Uso prático: fotografar um filme fotográfico negativo com o celular e aplicar a fórmula para "revelar" a foto</li>
+      <li>O material online da disciplina traz um exemplo de implementação em C com SDL3</li>
+    </ul>
+    </p>
+  </div>
+
   <footer>
     <p>by vitoralvesp</p>
   </footer>
