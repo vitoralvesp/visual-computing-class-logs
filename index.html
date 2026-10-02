@@ -245,6 +245,31 @@
     </p>
   </div>
 
+  <hr />
+
+  <div class="note">
+    <h3>Nota 02 - Filtragem de Imagens no Domínio Espacial</h3>
+    <div class="note-meta">01 oct 2026</div>
+    <p>
+      A filtragem no domínio espacial constitui uma das operações fundamentais do processamento digital de imagens. Seu princípio consiste em percorrer a imagem pixel a pixel por meio de uma pequena 
+      janela — também chamada de kernel, máscara ou template — que define como o valor de cada ponto será recalculado a partir de sua vizinhança. É importante destacar que a imagem de entrada nunca é 
+      alterada diretamente: o resultado de cada operação é sempre registrado em uma imagem de saída, preservando os dados originais ao longo do processo.
+      
+      Entre os filtros mais empregados, o filtro de média (de natureza passa-baixa) substitui cada pixel pela média de sua vizinhança, suavizando variações bruscas de intensidade. O grau de borramento 
+      depende diretamente do tamanho do kernel, de modo que janelas maiores produzem suavizações mais intensas. Trata-se de uma técnica amplamente utilizada na redução de ruído, no borramento de fundo 
+      e no pré-processamento para binarização.
+      
+      O filtro de mediana, por sua vez, não calcula uma média, mas ordena os valores da vizinhança e seleciona o elemento central. Essa abordagem descarta automaticamente valores extremos, tornando-o 
+      especialmente eficaz contra o ruído conhecido como sal e pimenta. Diferentemente do filtro de média, a mediana remove tais perturbações sem espalhá-las pela imagem, preservando melhor os contornos.
+      
+      Há ainda os filtros de mínimo e máximo, associados a operações morfológicas: o primeiro expande regiões escuras (dilatação), enquanto o segundo as reduz (erosão). Por fim, cabe contrastar o filtro caixa, 
+      cujos pesos são uniformes, com o filtro gaussiano, no qual o peso central é maior e decai conforme a distância. Este último é geralmente preferido por gerar resultados mais suaves e naturais.
+      
+      De modo geral, tais filtros pertencem à categoria de operações passa-baixa, que atenuam as altas frequências da imagem — bordas, texto e detalhes finos. O tratamento dessas altas frequências, voltado à 
+      detecção de bordas e contornos, corresponde às técnicas passa-alta, naturalmente complementares às aqui discutidas.
+    </p>
+  </div>
+
   <footer>
     <p>by vitoralvesp</p>
   </footer>
