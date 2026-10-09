@@ -28,7 +28,7 @@
       }
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       margin: 2.5rem 0 1.5rem 0;
       line-height: 1.25;
       color: #333;
@@ -285,7 +285,6 @@
       <li><b>Filtros como máscaras:</b> uma máscara (imagem C) é multiplicada pela imagem no domínio da frequência — regiões brancas (valor 1) preservam as frequências, regiões pretas (valor 0) as eliminam.</li>
       <li><b>Passa-baixa:</b> ao eliminar altas frequências, a imagem perde detalhes e bordas, ficando "borrada".</li>
       <li><b>Passa-alta:</b> ao manter apenas altas frequências, preservam-se contornos e bordas, sem preenchimento.</li>
-      <li>A navegação em um site interativo foi usada para demonstrar visualmente o efeito acumulativo das frequências na formação de uma letra "A" — subir a página equivalia a aplicar um filtro passa-baixa, eliminando progressivamente as altas frequências.</li>
     </ul>
   
     <h4>Ruído e Remoção de Frequências</h4>
@@ -299,9 +298,9 @@
     <ul>
       <li><b>Problema de baixa resolução:</b> regiões de alta frequência (muitas variações de intensidade) exigem mais amostras/pixels para serem representadas fielmente.</li>
       <li>Com poucas amostras para uma curva de alta frequência, perde-se informação — analogia visual com 10 pontos tentando capturar uma senoide rápida.</li>
-      <li>Caso extremo: amostrar apenas 3 pontos igualmente espaçados de uma senoide resulta em uma linha reta — informação completamente perdida.</li>
+      <li><b>Caso extremo:</b> amostrar apenas 3 pontos igualmente espaçados de uma senoide resulta em uma linha reta — informação completamente perdida.</li>
       <li><b>Analogia com áudio:</b> exportar música com taxa de amostragem muito baixa (ex.: 11 kHz) gera chiado; taxas mais altas (ex.: 192 kHz) preservam mais detalhes.</li>
-      <li>Uma vez digitalizados com baixa resolução, os dados perdidos <b>não podem ser recuperados</b>.</li>
+      <li>Uma vez digitalizados com baixa resolução, os dados perdidos não podem ser recuperados.</li>
     </ul>
   
     <h4>Transformada de Fourier e Senoides</h4>
@@ -309,7 +308,6 @@
       <li>O domínio da frequência tem relação direta com a <i>Transformada de Fourier</i>, mencionada como fundamento matemático do assunto — não é aprofundada na aula, mas indicada para quem quiser explorar.</li>
       <li>Qualquer sinal (imagem, áudio) pode ser decomposto em somatória de senoides com frequências diferentes.</li>
       <li><b>Onda quadrada</b> é resultado da somatória de infinitas senoides de frequências diferentes.</li>
-      <li>Um site interativo (com versão em português) foi demonstrado, mostrando animações de círculos girantes que representam frequências compondo desenhos.</li>
     </ul>
   
     <h4>Exemplos Práticos e Aplicações</h4>
