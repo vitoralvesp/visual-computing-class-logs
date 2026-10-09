@@ -274,6 +274,51 @@
     </p>
   </div>
 
+  <hr />
+
+  <div class="note">
+    <h1>Aula de Processamento de Imagens: Frequências, Filtros e Fourier</h1>
+
+    <h3>Filtros Passa-Baixa e Passa-Alta</h3>
+    <ul>
+      <li><b>Filtros como máscaras:</b> uma máscara (imagem C) é multiplicada pela imagem no domínio da frequência — regiões brancas (valor 1) preservam as frequências, regiões pretas (valor 0) as eliminam.</li>
+      <li><b>Passa-baixa:</b> ao eliminar altas frequências, a imagem perde detalhes e bordas, ficando "borrada".</li>
+      <li><b>Passa-alta:</b> ao manter apenas altas frequências, preservam-se contornos e bordas, sem preenchimento.</li>
+      <li>A navegação em um site interativo foi usada para demonstrar visualmente o efeito acumulativo das frequências na formação de uma letra "A" — subir a página equivalia a aplicar um filtro passa-baixa, eliminando progressivamente as altas frequências.</li>
+    </ul>
+  
+    <h3>Ruído e Remoção de Frequências</h3>
+    <ul>
+      <li>Pontos brancos destacados no espectro de frequências correspondem ao <b>ruído</b> da imagem.</li>
+      <li>Para remover o ruído, pinta-se de preto (bloqueia-se) a região correspondente no domínio da frequência; ao retornar ao domínio dos pixels, o ruído é eliminado.</li>
+      <li>Em áudio, ruídos de alta frequência (estalos, barulhos agudos) são reduzidos cortando-se as altas frequências — o mesmo princípio se aplica a imagens.</li>
+    </ul>
+  
+    <h3>Amostragem, Resolução e Perda de Informação</h3>
+    <ul>
+      <li><b>Problema de baixa resolução:</b> regiões de alta frequência (muitas variações de intensidade) exigem mais amostras/pixels para serem representadas fielmente.</li>
+      <li>Com poucas amostras para uma curva de alta frequência, perde-se informação — analogia visual com 10 pontos tentando capturar uma senoide rápida.</li>
+      <li>Caso extremo: amostrar apenas 3 pontos igualmente espaçados de uma senoide resulta em uma linha reta — informação completamente perdida.</li>
+      <li><b>Analogia com áudio:</b> exportar música com taxa de amostragem muito baixa (ex.: 11 kHz) gera chiado; taxas mais altas (ex.: 192 kHz) preservam mais detalhes.</li>
+      <li>Uma vez digitalizados com baixa resolução, os dados perdidos <b>não podem ser recuperados</b>.</li>
+    </ul>
+  
+    <h3>Transformada de Fourier e Senoides</h3>
+    <ul>
+      <li>O domínio da frequência tem relação direta com a <b>Transformada de Fourier</b>, mencionada como fundamento matemático do assunto — não é aprofundada na aula, mas indicada para quem quiser explorar.</li>
+      <li>Qualquer sinal (imagem, áudio) pode ser decomposto em somatória de senoides com frequências diferentes.</li>
+      <li><b>Onda quadrada</b> (vista em aula anterior com o professor Jamil) é resultado da somatória de infinitas senoides de frequências diferentes.</li>
+      <li>Um site interativo (com versão em português) foi demonstrado, mostrando animações de círculos girantes que representam frequências compondo desenhos.</li>
+    </ul>
+  
+    <h3>Exemplos Práticos e Aplicações</h3>
+    <ul>
+      <li><b>Superresolução (DLSS da Nvidia):</b> tecnologia baseada em interpolação de amostras inexistentes, tentando reconstruir detalhes perdidos via redes neurais.</li>
+      <li><b>IA generativa de imagens:</b> pode ser interpretada como aprendizado e combinação de frequências para gerar imagens — primeiros serviços geravam imagens com artefatos por falta de altas frequências.</li>
+      <li>Aplicações citadas: redução de ruído em reuniões online, sintetizadores de áudio, compressão JPEG, GIF, bitmap.</li>
+    </ul>
+  </div>
+
   <footer>
     <p>by vitoralvesp</p>
   </footer>
