@@ -320,10 +320,9 @@
 
   <hr />
   <div class="note">
-    <h3>Anotações da Aula: Bibliotecas, Shaders e Pipeline de Renderização</h3>
+    <h3>Anotações da Aula: Shaders e Pipeline de Renderização</h3>
     <div class="note-meta">29 out 2026</div>
-    <p>A construção de uma imagem a partir de modelos geométricos envolve uma sequência de etapas executadas pela GPU. Nesta aula, foram apresentados os fundamentos desse pipeline, o papel dos shaders e as diferenças entre distribuir código-fonte, executáveis e bibliotecas.</p>
-  ​
+    
     <h4>Bibliotecas, Binários e Dependências</h4>
     <ul>
       <li><b>Código-fonte e binário:</b> o código-fonte é texto e pode ser compilado para diferentes plataformas, desde que o programa e suas dependências sejam compatíveis. Já o binário é produzido para um ambiente específico, como determinado sistema operacional e arquitetura.</li>
@@ -365,7 +364,6 @@
       <li><b>Outros ecossistemas:</b> a Apple possui a Metal Shading Language, baseada em C++, para programar operações na GPU.</li>
       <li><b>Carregamento do código:</b> na aplicação em C apresentada, o shader estava armazenado em uma string, mas também poderia ser lido de um arquivo externo. Funções do OpenGL, identificadas pelo prefixo <code>gl</code>, fazem a integração com a API gráfica.</li>
     </ul>
-    <p>Em síntese, o exemplo mínimo de um triângulo conecta os conceitos centrais: a aplicação fornece dados à GPU, o vertex shader transforma sua geometria e o fragment shader determina as cores que contribuirão para a imagem exibida.</p>
   </div>
 
   <footer>
