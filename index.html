@@ -318,6 +318,56 @@
     </ul>
   </div>
 
+  <hr />
+  <div class="note">
+    <h3>Anotações da Aula: Bibliotecas, Shaders e Pipeline de Renderização</h3>
+    <div class="note-meta">29 out 2026</div>
+    <p>A construção de uma imagem a partir de modelos geométricos envolve uma sequência de etapas executadas pela GPU. Nesta aula, foram apresentados os fundamentos desse pipeline, o papel dos shaders e as diferenças entre distribuir código-fonte, executáveis e bibliotecas.</p>
+  ​
+    <h4>Bibliotecas, Binários e Dependências</h4>
+    <ul>
+      <li><b>Código-fonte e binário:</b> o código-fonte é texto e pode ser compilado para diferentes plataformas, desde que o programa e suas dependências sejam compatíveis. Já o binário é produzido para um ambiente específico, como determinado sistema operacional e arquitetura.</li>
+      <li><b>Dependências gráficas:</b> programas podem exigir componentes de APIs como Direct3D/DirectX ou Vulkan. Instaladores e plataformas como a Steam costumam verificar e instalar os componentes necessários.</li>
+      <li><b>Linkagem estática:</b> o código das bibliotecas utilizadas é incorporado ao executável, aumentando seu tamanho e reduzindo a necessidade de distribuir essas bibliotecas separadamente. Isso não elimina necessariamente outras dependências do sistema.</li>
+      <li><b>Linkagem dinâmica:</b> o programa utiliza bibliotecas externas, como DLLs no Windows. O executável tende a ser menor, mas pode deixar de funcionar quando uma biblioteca necessária está ausente.</li>
+      <li><b>Atualização e compatibilidade:</b> uma biblioteca dinâmica pode ser atualizada sem recompilar o programa, desde que mantenha a compatibilidade com a interface esperada.</li>
+      <li><b>Diagnóstico:</b> ferramentas como o Dependency Walker ajudam a identificar as DLLs utilizadas por um executável.</li>
+    </ul>
+    ​
+    <h4>Shaders e Etapas do Pipeline Gráfico</h4>
+    <p>Shaders são programas executados na GPU para processar dados gráficos. Em uma visão simplificada, o fluxo segue esta ordem: processamento dos vértices → rasterização → processamento dos fragmentos.</p>
+    <ul>
+      <li><b>Vertex shader:</b> processa os vértices da geometria. Uma tarefa comum é aplicar as matrizes de modelo, visualização e projeção (MVP), transformando as posições locais em coordenadas de recorte. A divisão por perspectiva e o mapeamento para a tela ocorrem em etapas posteriores.</li>
+      <li><b>Tessellation:</b> etapa opcional posterior ao vertex shader que subdivide primitivas, permitindo controlar o nível de detalhe da geometria, por exemplo, conforme a distância da câmera.</li>
+      <li><b>Geometry shader:</b> etapa opcional que permite gerar ou modificar primitivas na GPU; foi apresentada como menos frequente na prática.</li>
+      <li><b>Rasterização:</b> converte as primitivas geométricas em fragmentos que poderão contribuir para os pixels da imagem.</li>
+      <li><b>Fragment/pixel shader:</b> calcula valores como a cor de cada fragmento, podendo utilizar texturas e outros dados. “Fragment shader” é a denominação usada em OpenGL; “pixel shader”, no ecossistema Direct3D. Um fragmento não corresponde necessariamente a um pixel final.</li>
+      <li><b>Descarte de fragmentos:</b> o shader pode descartar fragmentos, permitindo efeitos como recortes ou “buracos” em uma superfície.</li>
+      <li><b>Pós-processamento:</b> depois de renderizar a cena, outras operações podem ser aplicadas à imagem para produzir efeitos visuais.</li>
+    </ul>
+    ​
+    <h4>GLSL: Entradas, Saídas e Dados da CPU</h4>
+    <ul>
+      <li><b>GLSL:</b> linguagem de shaders utilizada com OpenGL. A diretiva <code>#version 330</code> seleciona a versão 3.30 da linguagem, que precisa ser suportada pelo contexto gráfico.</li>
+      <li><b><code>in</code> e <code>out</code>:</b> indicam entradas e saídas de uma etapa. Dados produzidos pelo vertex shader, como cores, podem ser interpolados antes de chegar ao fragment shader.</li>
+      <li><b><code>uniform</code>:</b> permite que a aplicação na CPU forneça dados ao shader, como matrizes e parâmetros. Esses valores não variam entre as invocações de uma mesma chamada de desenho.</li>
+      <li><b><code>vec3</code>:</b> vetor de três componentes, utilizado para representar, por exemplo, posições XYZ ou cores RGB.</li>
+      <li><b><code>mat4</code>:</b> matriz 4 × 4 usada em transformações geométricas. Uma posição tridimensional pode ser convertida em <code>vec4</code>, com componente homogênea igual a 1, antes da multiplicação.</li>
+      <li><b><code>gl_Position</code>:</b> saída do vertex shader que informa a posição do vértice em coordenadas de recorte.</li>
+      <li><b>Cor de saída:</b> no exemplo, o fragment shader recebe a cor interpolada e produz um <code>vec4</code>, acrescentando o componente alfa aos valores RGB.</li>
+    </ul>
+    ​
+    <h4>HLSL e Integração com a Aplicação</h4>
+    <ul>
+      <li><b>HLSL:</b> linguagem de shaders do ecossistema Microsoft, usada com Direct3D. No exemplo da aula, as funções dos shaders foram reunidas em um único arquivo.</li>
+      <li><b>Estruturas e semânticas:</b> o código pode usar <code>struct</code> para organizar dados e semânticas para identificar a função de entradas e saídas no pipeline.</li>
+      <li><b>Multiplicação:</b> a função <code>mul</code> foi utilizada no exemplo para realizar operações entre vetores e matrizes.</li>
+      <li><b>Outros ecossistemas:</b> a Apple possui a Metal Shading Language, baseada em C++, para programar operações na GPU.</li>
+      <li><b>Carregamento do código:</b> na aplicação em C apresentada, o shader estava armazenado em uma string, mas também poderia ser lido de um arquivo externo. Funções do OpenGL, identificadas pelo prefixo <code>gl</code>, fazem a integração com a API gráfica.</li>
+    </ul>
+    <p>Em síntese, o exemplo mínimo de um triângulo conecta os conceitos centrais: a aplicação fornece dados à GPU, o vertex shader transforma sua geometria e o fragment shader determina as cores que contribuirão para a imagem exibida.</p>
+  </div>
+
   <footer>
     <p>by vitoralvesp</p>
   </footer>
